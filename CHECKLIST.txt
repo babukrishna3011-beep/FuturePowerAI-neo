@@ -1,0 +1,12 @@
+FINAL RECHECK
+[PASS] Python builder syntax
+[PASS] Electron main JS syntax
+[PASS] Worker JS syntax
+[PASS] Local AI JS syntax
+[PASS] package.json JSON parsing
+[PASS] SQLite starter database opens
+[PASS] SQLite starter database has 35 chunks and 35 FTS rows
+[PASS] ZIP will use proper application folder structure
+[PASS] No model weights falsely claimed to be bundled
+[PASS] Online mode remains explicit/user-controlled in the UI
+[NOTE] Full 250–300 MB education database has not been supplied; included DB is a starter from supplied NCERT Science content

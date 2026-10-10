@@ -1,0 +1,24 @@
+FuturePowerAIPlus 3.0 - Third-party notices
+
+1) SmolLM2
+Source: Hugging Face / HuggingFaceTB/SmolLM2-135M-Instruct and
+HuggingFaceTB/SmolLM2-1.7B-Instruct
+License: Apache License 2.0
+Official source:
+https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct
+https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct
+
+2) Transformers.js
+Package: @huggingface/transformers
+License and notices are provided by the package distributed through npm.
+
+3) Electron, esbuild and electron-builder
+These packages retain their own licenses/notices. See installed package
+metadata after npm install.
+
+4) Online reference sources
+The optional online route can query Wikipedia and DuckDuckGo Instant Answers.
+Their own terms, trademarks, content licenses and rate limits remain applicable.
+
+Do not add third-party educational PDFs or datasets to the knowledge pack unless
+you have permission to redistribute them.

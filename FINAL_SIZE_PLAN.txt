@@ -1,0 +1,11 @@
+FuturePowerAIPlus 3.0 final size strategy
+
+Models:
+- SmolLM2-135M-Instruct q4f16 ONNX ~117 MB
+- SmolLM2-1.7B-Instruct q4f16 ONNX ~1.11 GB
+
+Combined model artifacts are roughly 1.23 GB before runtime/cache metadata.
+Keep the education database as a separate optional download (~250-300 MB target).
+The application package itself should stay small and must not contain model weights.
+
+Online mode is OFF by default and is requested only after the user explicitly enables it.

@@ -1,0 +1,57 @@
+{
+  "name": "futurepoweraiplus",
+  "version": "3.0.1",
+  "description": "FuturePowerAIPlus lightweight two-model local-first AI app",
+  "main": "app/main.cjs",
+  "author": "FuturePowerAIPlus",
+  "private": true,
+  "scripts": {
+    "start": "npm run build:local-ai && electron .",
+    "build:local-ai": "esbuild renderer/local-ai.js --bundle --format=esm --platform=browser --outfile=renderer/local-ai.bundle.js",
+    "build": "npm run build:local-ai",
+    "dist:portable": "npm run build:local-ai && electron-builder --win portable",
+    "dist:installer": "npm run build:local-ai && electron-builder --win nsis",
+    "check": "node --check app/main.cjs && node --check src/index.js && node --check renderer/local-ai.js && python -m py_compile build_edu_db_FINAL_300MB.py"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^3.8.1"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest",
+    "esbuild": "latest"
+  },
+  "build": {
+    "appId": "com.futurepoweraiplus.app",
+    "productName": "FuturePowerAIPlus",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "app/**/*",
+      "renderer/**/*",
+      "src/**/*",
+      "package.json",
+      "README.md",
+      "MODEL_SETUP.txt",
+      "THIRD-PARTY-NOTICES.txt",
+      "build_edu_db_FINAL_300MB.py"
+    ],
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ],
+      "artifactName": "FuturePowerAIPlus-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
+  }
+}

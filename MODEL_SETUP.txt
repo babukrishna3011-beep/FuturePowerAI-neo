@@ -1,0 +1,20 @@
+FuturePowerAIPlus 3.0 - TWO LOCAL MODELS
+
+FAST MODEL
+Base repo: HuggingFaceTB/SmolLM2-135M-Instruct
+Runtime: Transformers.js ONNX
+Quantization: q4f16
+Use: simple questions, quick chat, short explanations
+
+DEEP MODEL
+Base repo: HuggingFaceTB/SmolLM2-1.7B-Instruct
+Runtime: Transformers.js ONNX
+Quantization: q4f16
+Use: mathematics, JEE/NEET-style study, coding, long/structured work
+
+Model files are intentionally downloaded/cached separately from the application.
+This keeps the application package small and allows model caching across updates.
+
+Expected current artifact sizes are approximately 117 MB for the 135M q4f16 ONNX
+model and 1.11 GB for the 1.7B q4f16 ONNX model. Exact network/cache size can
+vary with tokenizer/config files and runtime version.
